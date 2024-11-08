@@ -57,7 +57,9 @@ export function GenerativeDrops() {
         </div>
       </motion.div>
 
-      <Separator className="bg-[#9A8866]/20" />
+      <div className="w-full md:max-w-[880px]">
+        <Separator className="bg-[#9A8866]/20" />
+      </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 px-4 md:px-0">
         {variants.map((variant, index) => (
@@ -78,7 +80,9 @@ export function GenerativeDrops() {
         ))}
       </div>
 
-      <Separator className="bg-[#9A8866]/20" />
+      <div className="w-full md:max-w-[880px]">
+        <Separator className="bg-[#9A8866]/20" />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

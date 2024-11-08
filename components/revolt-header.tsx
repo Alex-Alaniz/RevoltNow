@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 export function RevoltHeader() {
   return (
@@ -26,15 +27,21 @@ export function RevoltHeader() {
             className="object-cover"
             priority
           />
-          {/* Commented out Connect Wallet button
-          <Button 
-            variant="outline" 
-            className="absolute top-2 right-2 md:top-4 md:right-4 border-[#9A8866] text-[#9A8866] hover:bg-[#9A8866] hover:text-black transition-colors text-sm md:text-base"
-          >
-            Connect Wallet
-          </Button>
-          */}
         </div>
+      </div>
+
+      <div className="w-full md:max-w-[880px] mx-auto mt-8">
+        <Separator className="bg-[#9A8866]/20" />
+      </div>
+
+      {/* Title section */}
+      <div className="max-w-3xl mx-auto mt-8">
+        <h2 className="text-xl tracking-wider text-[#9A8866] mb-4">
+          DISRUPT, INNOVATE & REVOLT
+        </h2>
+        <p className="text-[#9A8866] leading-relaxed text-sm">
+          REVOLT stands as a testament to my relentless pursuit of artistic autonomy and defiance of conventional norms. This collection is not just a creative expression but a rebellion against the traditional structures that govern both art and economics. With NFT and cryptocurrency representing the future of decentralization, my work mirrors that rejection of conformity, embracing innovation in technique, concept, and execution. It is a challenge to the prevailing narrative, an invitation to rethink, rebuild, and rise against the expected.
+        </p>
       </div>
     </header>
   );
