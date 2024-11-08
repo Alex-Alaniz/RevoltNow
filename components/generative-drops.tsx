@@ -27,13 +27,13 @@ const details = [
 
 export function GenerativeDrops() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-8 md:space-y-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div className="flex items-center gap-8">
-          <div className="relative w-[600px] h-[200px]">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+          <div className="relative w-full md:w-[600px] h-[150px] md:h-[200px]">
             <Image
               src="/images/generative/tigers/artwork.jpg"
               alt="TIGERS"
@@ -41,13 +41,13 @@ export function GenerativeDrops() {
               className="object-contain"
             />
           </div>
-          <div className="flex-1 max-w-[280px]">
-            <h3 className="text-lg font-light text-[#9A8866] mb-2">TIGERS</h3>
+          <div className="w-full md:flex-1 md:max-w-[280px] px-4 md:px-0">
+            <h3 className="text-lg font-light text-[#9A8866] mb-2 text-center md:text-left">TIGERS</h3>
             <ul className="space-y-0.5 text-xs font-light text-[#9A8866]/80">
               {details.map((detail, i) => (
                 <li 
                   key={i}
-                  className="leading-tight"
+                  className="leading-tight text-center md:text-left"
                 >
                   {detail}
                 </li>
@@ -59,7 +59,7 @@ export function GenerativeDrops() {
 
       <Separator className="bg-[#9A8866]/20" />
 
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 px-4 md:px-0">
         {variants.map((variant, index) => (
           <motion.div
             key={index}
@@ -83,14 +83,14 @@ export function GenerativeDrops() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex justify-end items-center"
+        className="flex justify-center md:justify-end items-center px-4 md:px-0"
       >
         <Image
           src="/images/footer-logo.png"
           alt="Footer Logo"
-          width={160}
-          height={60}
-          className="object-contain text-[#9A8866]"
+          width={120}
+          height={45}
+          className="object-contain text-[#9A8866] md:w-[160px] md:h-[60px]"
           style={{ filter: 'brightness(0) saturate(100%) invert(57%) sepia(14%) saturate(654%) hue-rotate(6deg) brightness(91%) contrast(87%)' }}
         />
       </motion.div>
