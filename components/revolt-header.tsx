@@ -31,7 +31,7 @@ export function RevoltHeader() {
       </div>
 
       <div className="w-full md:max-w-[880px] mx-auto mt-8">
-        <Separator className="bg-[#9A8866]/20" />
+        <Separator className="bg-[#9A8866]/40 h-[3px]" />
       </div>
 
       {/* Title section */}

@@ -61,7 +61,7 @@ export function GenerativeDrops() {
       </Link>
 
       <div className="w-full md:max-w-[880px]">
-        <Separator className="bg-[#9A8866]/20" />
+        <Separator className="bg-[#9A8866]/40 h-[3px]" />
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 px-4 md:px-0">
@@ -84,7 +84,7 @@ export function GenerativeDrops() {
       </div>
 
       <div className="w-full md:max-w-[880px]">
-        <Separator className="bg-[#9A8866]/20" />
+        <Separator className="bg-[#9A8866]/40 h-[3px]" />
       </div>
 
       <motion.div
@@ -95,9 +95,9 @@ export function GenerativeDrops() {
         <Image
           src="/images/footer-logo.png"
           alt="Footer Logo"
-          width={120}
-          height={45}
-          className="object-contain text-[#9A8866] md:w-[160px] md:h-[60px]"
+          width={240}
+          height={90}
+          className="object-contain text-[#9A8866] md:w-[320px] md:h-[120px]"
           style={{ filter: 'brightness(0) saturate(100%) invert(57%) sepia(14%) saturate(654%) hue-rotate(6deg) brightness(91%) contrast(87%)' }}
         />
       </motion.div>

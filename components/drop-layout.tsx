@@ -29,7 +29,7 @@ export function DropLayout({ title, titleImage, video, description }: DropLayout
         <div className="space-y-8">
           {/* First Separator - Above title */}
           <div className="w-full">
-            <Separator className="bg-[#9A8866]/20" />
+            <Separator className="bg-[#9A8866]/40 h-[3px]" />
           </div>
 
           {/* Header Section with Title and Acquire Button */}
@@ -65,7 +65,7 @@ export function DropLayout({ title, titleImage, video, description }: DropLayout
 
           {/* Second Separator - Above video */}
           <div className="w-full">
-            <Separator className="bg-[#9A8866]/20" />
+            <Separator className="bg-[#9A8866]/40 h-[3px]" />
           </div>
 
           {/* Video Loop */}
@@ -87,7 +87,7 @@ export function DropLayout({ title, titleImage, video, description }: DropLayout
 
           {/* Third Separator - Below video */}
           <div className="w-full">
-            <Separator className="bg-[#9A8866]/20" />
+            <Separator className="bg-[#9A8866]/40 h-[3px]" />
           </div>
         </div>
 
@@ -100,9 +100,9 @@ export function DropLayout({ title, titleImage, video, description }: DropLayout
           <Image
             src="/images/footer-logo.png"
             alt="Footer Logo"
-            width={120}
-            height={45}
-            className="object-contain text-[#9A8866] md:w-[160px] md:h-[60px]"
+            width={240}
+            height={90}
+            className="object-contain text-[#9A8866] md:w-[320px] md:h-[120px]"
             style={{ 
               filter: 'brightness(0) saturate(100%) invert(57%) sepia(14%) saturate(654%) hue-rotate(6deg) brightness(91%) contrast(87%)' 
             }}
