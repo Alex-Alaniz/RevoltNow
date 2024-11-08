@@ -26,12 +26,14 @@ export function RevoltHeader() {
             className="object-cover"
             priority
           />
+          {/* Commented out Connect Wallet button
           <Button 
             variant="outline" 
             className="absolute top-2 right-2 md:top-4 md:right-4 border-[#9A8866] text-[#9A8866] hover:bg-[#9A8866] hover:text-black transition-colors text-sm md:text-base"
           >
             Connect Wallet
           </Button>
+          */}
         </div>
       </div>
     </header>
