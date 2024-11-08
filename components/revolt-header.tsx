@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 export function RevoltHeader() {
   return (
     <header className="relative bg-black w-screen -mx-[calc((100vw-100%)/2)] px-[calc((100vw-100%)/2)]">
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8 py-4 md:py-0">
+      <div className="flex flex-col gap-4 py-4">
         {/* Left side - Logo */}
-        <div className="relative w-[200px] md:w-[300px] mx-auto md:mx-0">
+        <div className="relative w-[200px] md:w-[300px] mx-auto">
           <Image
             src="/images/revolt-logo.png"
             alt="REVOLT"
@@ -17,8 +17,8 @@ export function RevoltHeader() {
           />
         </div>
 
-        {/* Right side - Banner Image */}
-        <div className="flex-1 relative h-[150px] md:h-[200px] overflow-hidden">
+        {/* Banner Image */}
+        <div className="relative h-[150px] md:h-[200px] overflow-hidden">
           <Image
             src="/images/tiger-banner.jpg"
             alt="Tiger Banner"
