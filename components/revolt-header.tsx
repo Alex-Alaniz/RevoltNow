@@ -18,7 +18,7 @@ export function RevoltHeader() {
         </div>
 
         {/* Right side - Banner Image */}
-        <div className="flex-1 relative h-[150px] md:h-[200px] overflow-hidden">
+        <div className="w-full md:flex-1 relative h-[150px] md:h-[200px] overflow-hidden">
           <Image
             src="/images/tiger-banner.jpg"
             alt="Tiger Banner"
