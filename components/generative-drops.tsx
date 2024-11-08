@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
 
 const variants = [
   '/images/generative/tigers/tiger-variant-1.png',
@@ -28,34 +29,36 @@ const details = [
 export function GenerativeDrops() {
   return (
     <div className="space-y-8 md:space-y-12">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-          <div className="relative w-full md:w-[600px] h-[150px] md:h-[200px]">
-            <Image
-              src="/images/generative/tigers/artwork.jpg"
-              alt="TIGERS"
-              fill
-              className="object-contain"
-            />
+      <Link href="/tigers" className="block hover:opacity-90 transition-opacity">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <div className="relative w-full md:w-[600px] h-[150px] md:h-[200px]">
+              <Image
+                src="/images/generative/tigers/artwork.jpg"
+                alt="TIGERS"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="w-full md:flex-1 md:max-w-[280px] px-4 md:px-0">
+              <h3 className="text-lg font-light text-[#9A8866] mb-2 text-center md:text-left">TIGERS</h3>
+              <ul className="space-y-0.5 text-xs font-light text-[#9A8866]/80">
+                {details.map((detail, i) => (
+                  <li 
+                    key={i}
+                    className="leading-tight text-center md:text-left"
+                  >
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="w-full md:flex-1 md:max-w-[280px] px-4 md:px-0">
-            <h3 className="text-lg font-light text-[#9A8866] mb-2 text-center md:text-left">TIGERS</h3>
-            <ul className="space-y-0.5 text-xs font-light text-[#9A8866]/80">
-              {details.map((detail, i) => (
-                <li 
-                  key={i}
-                  className="leading-tight text-center md:text-left"
-                >
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </Link>
 
       <div className="w-full md:max-w-[880px]">
         <Separator className="bg-[#9A8866]/20" />

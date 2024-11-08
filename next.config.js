@@ -4,7 +4,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    domains: [], // Add any external image domains if needed
+  },
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
