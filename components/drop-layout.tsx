@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { DropHeader } from '@/components/drop-header';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { Volume2, VolumeX } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
 
 interface DropLayoutProps {
   title: string;
@@ -14,6 +16,23 @@ interface DropLayoutProps {
 }
 
 export function DropLayout({ title, titleImage, video, description }: DropLayoutProps) {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  useEffect(() => {
+    // Ensure video is muted on initial load
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       <DropHeader />
@@ -68,22 +87,36 @@ export function DropLayout({ title, titleImage, video, description }: DropLayout
             <Separator className="bg-[#9A8866]/40 h-[3px]" />
           </div>
 
-          {/* Video Loop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="relative aspect-[16/9] w-full"
-          >
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
+          {/* Video Loop with Audio Controls */}
+          <div className="relative">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="relative aspect-[16/9] w-full"
             >
-              <source src={video} type="video/mp4" />
-            </video>
-          </motion.div>
+              <video
+                ref={videoRef}
+                autoPlay
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src={video} type="video/mp4" />
+              </video>
+            </motion.div>
+            
+            {/* Audio Control Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute bottom-4 right-4 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
+            >
+              {isMuted ? (
+                <VolumeX className="w-6 h-6 text-white" />
+              ) : (
+                <Volume2 className="w-6 h-6 text-white" />
+              )}
+            </button>
+          </div>
 
           {/* Third Separator - Below video */}
           <div className="w-full">
