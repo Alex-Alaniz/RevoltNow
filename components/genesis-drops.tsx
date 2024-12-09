@@ -10,7 +10,7 @@ const genesisDrops = [
     title: 'TIGER STRIKE',
     artwork: '/images/genesis/tiger-strike/artwork.jpg',
     details: [
-      '-10 SUPPLY ONLY',
+      '-100 SUPPLY ONLY',
       '-FULLY ANIMATED LOOPING VIDEO',
       '-Claimable tangible collectibles packaged specific to each',
       'NFT in the series.',
@@ -27,7 +27,7 @@ const genesisDrops = [
     title: 'CYBER KITTY',
     artwork: '/images/genesis/cyber-kitty/artwork.jpg',
     details: [
-      '-10 SUPPLY ONLY',
+      '-100 SUPPLY ONLY',
       '-FULLY ANIMATED LOOPING VIDEO',
       '-Claimable tangible collectibles packaged specific to each',
       'NFT in the series.',
@@ -44,7 +44,7 @@ const genesisDrops = [
     title: 'ONI WARRIOR',
     artwork: '/images/genesis/oni-warrior/artwork.jpg',
     details: [
-      '-10 SUPPLY ONLY',
+      '-100 SUPPLY ONLY',
       '-FULLY ANIMATED LOOPING VIDEO',
       '-Claimable tangible collectibles packaged specific to each',
       'NFT in the series.',
@@ -61,7 +61,7 @@ const genesisDrops = [
     title: 'LOVE OF MONEY',
     artwork: '/images/genesis/love-of-money/artwork.jpg',
     details: [
-      '-10 SUPPLY ONLY',
+      '-100 SUPPLY ONLY',
       '-FULLY ANIMATED LOOPING VIDEO',
       '-Claimable tangible collectibles packaged specific to each',
       'NFT in the series.',
